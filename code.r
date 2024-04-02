@@ -1,8 +1,6 @@
 library(R.matlab)
 
 # import network data
-networks <- readMat("AllNetworks.mat")
-finaldata <- readMat("finalData.mat")
 network001 <- readMat("network001.mat")
-
-network001
+network002 <- readMat("network002.mat")
+network003 <- readMat("network003.mat")
