@@ -93,7 +93,7 @@ g_max_clq_max_size <- max(g_max_clq_sizes)
 # Summary Statistics Table
 summary_table <- data.frame(
   Metric = c("Number of Nodes (Original Graph)", 
-             "Number of Nodes (Largest Component)",
+             "Number of Nodes (Largest Connected Component)",
              "Average Degree", "Minimum Degree", "Maximum Degree", 
              "Density", "Average Maximal Clique Size", 
              "Minimum Maximal Clique Size", 
@@ -112,7 +112,8 @@ summary_gt <- summary_table %>%
   gt() %>%
   tab_header(
     title = "Summary Statistics of Indonesian Hamlet Network",
-    subtitle = "Data is sourced from Alatas et al. (2016), Network index is 001"
+    subtitle = "Data is sourced from Alatas et al. (2016), Network index is 001
+    NOTE: All values are computed for the largest connected component of the network."
   ) %>%
   fmt_number(
     columns = vars(Value),
