@@ -1,8 +1,8 @@
 # Install all necessary libraries
 library(R.matlab)
 library(igraph)
-library(knitr)
 library(gt)
+library(foreign)
 
 # Load network data from .mat file
 network <- readMat("network001.mat")
