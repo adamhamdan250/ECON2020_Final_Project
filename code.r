@@ -112,7 +112,7 @@ summary_gt <- summary_table %>%
   gt() %>%
   tab_header(
     title = "Summary Statistics of Indonesian Hamlet Network",
-    subtitle = "Data is sourced from Alatas et al. (2016), Network index is 001
+    subtitle = "Data is sourced from Alatas et al. (2016), Network index is 001 \n
     NOTE: All values are computed for the largest connected component of the network."
   ) %>%
   fmt_number(
