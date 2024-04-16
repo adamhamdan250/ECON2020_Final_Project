@@ -3,7 +3,7 @@ library(R.matlab)
 library(igraph)
 
 # Load raw network data from .mat file
-network <- readMat("network001.mat")
+network <- readMat("villageWithGroupsAndLeaders001network.mat")
 
 # Transform connection lists into connection matrix
 adjacency <- matrix(unlist(network), ncol = 74, byrow=TRUE)
