@@ -1,10 +1,6 @@
-# SUMMARY STATISTICS
-
 # Install all necessary libraries
-library(R.matlab)
 library(igraph)
 library(gt)
-library(foreign)
 
 # Import igraph objects from "/data" folder
 graph <- read_graph("data/graph.graphml", format = "graphml")
