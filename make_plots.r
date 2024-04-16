@@ -68,4 +68,4 @@ fig_network_most_connected <- plot(
 )
 
 # Export plots to "/output" folder
-ggsave("output/original_network.pdf", plot = fig_network)
+ggsave("output/original_network.jpeg", plot = fig_network)
