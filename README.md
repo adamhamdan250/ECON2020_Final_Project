@@ -13,7 +13,6 @@
   - --> Network Data
   - --> villageWithGroupsAndLeaders001network.mat
 
-
 ### Overview
 
 - Folder /code contains all scripts:
@@ -21,6 +20,15 @@
   - "make_plots.r" generates four network plots, and exports them to /output folder
   - "make_table.r" creates a summary statistic table for the largest connected subnetwork of the original network
 
-- Folder /data contains all clean network data:
-  - "
+- Folder /data contains all clean network data (adjacency matrices):
+  - "graph.graphml" original network data, in Graphml format
+  - "graph_connected.graphml" subset of original network data, removing all nodes that are completely unconnected, in Graphml format
+  - "graph_largest.graphml" subset of original network data, keeping the largest connected subnetwork, in Graphml format
+
+- Folder /tests contains unit test scripts:
+  - "test-network" tests two things:
+    - Test that # of nodes in original network is greater or equal to # of nodes in largest connected subnetwork
+    - Test that all nodes in graph_connected have at least one connection (one edge)
+
+- Folder /output contains all plots and tables
 
