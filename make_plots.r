@@ -7,10 +7,12 @@ graph <- read_graph("data/graph.graphml", format = "graphml")
 graph_connected <- read_graph("data/graph_connected.graphml", format = "graphml")
 graph_large <- read_graph("data/graph_large.graphml", format = "graphml")
 
-# Open PDF device
-pdf("output/original_network.pdf")
-
 # PLOT 1: Original network
+
+# Open PDF device
+pdf("output/plot_original_network.pdf")
+
+# Generate plot
 fig_network <- plot(graph,
      vertex.label=NA,
      vertex.size = 5,
@@ -24,6 +26,10 @@ fig_network <- plot(graph,
 dev.off()
 
 # PLOT 2: Connected components
+
+# Open PDF device
+pdf("output/plot_connected_network.pdf")
+
 fig_network_connected <- plot(graph_connected, 
      vertex.label=NA,
      vertex.size = 5,
