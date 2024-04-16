@@ -1,14 +1,14 @@
 # Install all necessary libraries
-library(R.matlab)
 library(igraph)
-library(gt)
-library(foreign)
 library(ggplot2)
 
 # Import igraph objects from "/data" folder
 graph <- read_graph("data/graph.graphml", format = "graphml")
 graph_connected <- read_graph("data/graph_connected.graphml", format = "graphml")
 graph_large <- read_graph("data/graph_large.graphml", format = "graphml")
+
+# Open PDF device
+pdf("output/original_network.pdf")
 
 # PLOT 1: Original network
 fig_network <- plot(graph,
@@ -19,6 +19,9 @@ fig_network <- plot(graph,
      edge.width = 1,
      main = "Original Network Structure"
 )
+
+# Close PDF device
+dev.off()
 
 # PLOT 2: Connected components
 fig_network_connected <- plot(graph_connected, 
