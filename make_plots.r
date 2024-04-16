@@ -3,6 +3,7 @@ library(R.matlab)
 library(igraph)
 library(gt)
 library(foreign)
+library(ggplot2)
 
 # Import igraph objects from "/data" folder
 graph <- read_graph("data/graph.graphml", format = "graphml")
@@ -67,4 +68,4 @@ fig_network_most_connected <- plot(
 )
 
 # Export plots to "/output" folder
-
+ggsave("output/original_network.pdf", plot = fig_network)
