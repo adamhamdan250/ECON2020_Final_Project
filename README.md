@@ -15,6 +15,8 @@
 
 ### Overview
 
+- "main.r" script runs all code and unit tests
+
 - Folder /code contains all scripts:
   - "get_data.r" transforms raw network data into igraph objects and exports them to /data folder
   - "make_plots.r" generates four network plots, and exports them to /output folder
